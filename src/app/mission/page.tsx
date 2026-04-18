@@ -28,7 +28,6 @@ export default function MissionPage() {
             <li>Literacy support for adults, youth, and families</li>
             <li>GED and continuing education pathways</li>
             <li>Community groups, events, and local learning spaces</li>
-            <li>Accessibility-first discovery and plain-language summaries</li>
           </ul>
         </div>
         <div className="rounded-2xl border border-zinc-200/70 bg-white p-8 dark:border-white/10 dark:bg-zinc-950">
