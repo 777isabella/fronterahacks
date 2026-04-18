@@ -20,17 +20,17 @@ export type Resource = {
 };
 
 export const RESOURCES: Resource[] = [
-  {
-    id: "rgv-literacy-center",
-    title: "Rio Grande Valley Literacy Center",
-    url: "https://www.nld.org/rio-grande-valley-literacy-center",
-    description:
-      "Adult literacy and education support in the Rio Grande Valley.",
-    categories: ["literacy", "tutoring"],
-    audience: ["adult"],
-    format: ["in_person", "online"],
-    region: ["rgv"],
-  },
+  // {
+  //   id: "rgv-literacy-center",
+  //   title: "Rio Grande Valley Literacy Center",
+  //   url: "https://www.nld.org/rio-grande-valley-literacy-center",
+  //   description:
+  //     "Adult literacy and education support in the Rio Grande Valley.",
+  //   categories: ["literacy", "tutoring"],
+  //   audience: ["adult"],
+  //   format: ["in_person", "online"],
+  //   region: ["rgv"],
+  // },
   {
     id: "rgv-vision-literacy-center-article",
     title: "RGV Vision Magazine: The RGV Literacy Center",
