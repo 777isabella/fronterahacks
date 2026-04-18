@@ -27,11 +27,14 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-10">
+        <h4
+           className="text-base font-semibold">Dr. Ruha Benjamin's TED Talk about creating an UStopia, a world where everyone can thrive, especially with the technological advancements.
+        </h4>
         <div className="aspect-video w-full overflow-hidden rounded-2xl">
           <iframe
             className="h-full w-full"
             src="https://www.youtube.com/embed/QO3nY_u6hos?autoplay=1&rel=0"
-            title="Dr. Ruha Benjamin's Ted Talk about creating an UStopia, a world where everyone can thrive, especially with the technological advancements."
+            title="Youtube link to TED Talk."
             allow="autoplay; encrypted-media"
             allowFullScreen
           ></iframe>
