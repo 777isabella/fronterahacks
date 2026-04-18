@@ -1,8 +1,12 @@
 import Link from "next/link";
+import LanguageSelector from "./LanguageSelector"
 
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-5xl px-6 py-16">
+      <header className="flex justify-end mb-6">
+        <LanguageSelector />
+      </header>
       <section className="rounded-2xl border border-zinc-200/70 bg-white p-10 shadow-sm dark:border-white/10 dark:bg-zinc-950">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           UStopia RGV
