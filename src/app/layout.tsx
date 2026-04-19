@@ -28,8 +28,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-50">
-        <header className="border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-black/40">
+      <body className="min-h-full flex flex-col text-[color:var(--foreground)]">
+        <header className="aero-bar">
           <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
             <Link href="/" className="text-lg font-semibold tracking-tight">
               UStopia RGV
@@ -48,7 +48,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-zinc-200/70 py-8 text-sm text-zinc-600 dark:border-white/10 dark:text-zinc-400">
+        <footer className="mt-10 border-t py-8 text-sm" style={{ borderColor: "var(--aero-border)" }}>
           <div className="mx-auto w-full max-w-5xl px-6">
             Built for Frontera Hacks — Rio Grande Valley
           </div>

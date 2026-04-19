@@ -23,7 +23,7 @@ export default function LanguageSelector() {
         id="language"
         value={lang}
         onChange={handleChange}
-        className="border rounded-md px-2 py-1 bg-white text-black"
+        className="aero-input px-2 py-1"
       >
         <option value="en">English</option>
         <option value="es">Español</option>
