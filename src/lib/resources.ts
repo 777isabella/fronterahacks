@@ -32,6 +32,26 @@ export const RESOURCES: Resource[] = [
   //   region: ["rgv"],
   // },
   {
+    id: "events-calendar",
+    title: "RGV Calendar of Events",
+    url: "https://myrgv.com/calendar-of-events/?utm_source=copilot.com",
+    description: "Events here in the RGV can be seen on this calendar.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["both"],
+    region: ["rgv"]
+  },
+ {
+    id: "events-stx",
+    title: "South Texas Calendar of Events",
+    url: "https://www.steprgv.org/events?utm_source=copilot.com",
+    description: "A calendar of events in South Texas provided by the South Texas Equality Project.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["both"],
+    region: ["rgv"]
+  },
+  {
     id: "rgv-vision-literacy-center-article",
     title: "RGV Vision Magazine: The RGV Literacy Center",
     url: "https://rgvisionmagazine.com/the-rgv-literacy-center/",
