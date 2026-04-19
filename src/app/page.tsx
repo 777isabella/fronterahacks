@@ -32,9 +32,12 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-10">
+        <h4 className="text-base font-semibold">
+          Whereas utopias are the stuff of dreams, dystopias, the stuff of nightmares, ustopias are what we create together when we're wide awake."- Dr. Buha Benjamin
+        <br></h4>
         <h4
            className="text-base font-semibold">Dr. Ruha Benjamin&apos;s TED Talk about creating an UStopia, a world where everyone can thrive, especially with the technological advancements.
-        </h4>
+        <br></h4>
         <div className="aspect-video w-full overflow-hidden rounded-2xl">
           <iframe
             className="h-full w-full"
