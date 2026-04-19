@@ -31,28 +31,6 @@ export const RESOURCES: Resource[] = [
   //   format: ["in_person", "online"],
   //   region: ["rgv"],
   // },
-   {
-    id: "events-calendar",
-    title: "RGV Calendar of Events",
-    url: "https://myrgv.com/calendar-of-events/?utm_source=copilot.com",
-    description:
-      "Events here in the RGV can be seen on this calendar."
-    categories: ["community"],
-    audience: ["adult", "youth", "family"],
-    format: ["both"],
-    region: ["rgv"]
-  },
- {
-    id: "events-stx",
-    title: "South Texas Calendar of Events",
-    url: "https://www.steprgv.org/events?utm_source=copilot.com",
-    description:
-      "A calendar of events in South Texas provided by the South Texas Equality Project."
-    categories: ["community"],
-    audience: ["adult", "youth", "family"],
-    format: ["both"],
-    region: ["rgv"]
-  },
   {
     id: "rgv-vision-literacy-center-article",
     title: "RGV Vision Magazine: The RGV Literacy Center",
@@ -138,11 +116,11 @@ export const RESOURCES: Resource[] = [
     region: ["rgv"],
   },
   {
-    id: "health-literacy",
-    title: "Bridging the Gap of Healthcare Inequities in the Rio Grande Valley",
-    url: "https://www.cms.gov/files/document/bridging-gap-healthcare-inequities-rio-grande-valley-healthcare-systems-integrated-health-equity.pdf",
+    id: "health-literacy-cdc",
+    title: "CDC: Health Literacy",
+    url: "https://www.cdc.gov/healthliteracy/index.html",
     description:
-      "Bringing awareness to healthcare inequities and detailing DHR's plan to increase healthcare equity in the RGV.",
+      "Plain-language health info and tools for improving health literacy.",
     categories: ["health", "literacy"],
     audience: ["adult", "educator", "family"],
     format: ["online"],
@@ -169,5 +147,65 @@ export const RESOURCES: Resource[] = [
     audience: ["adult", "youth", "family"],
     format: ["both"],
     region: ["cameron", "rgv"],
-  }
+  },
+  {
+    id: "explore-mcallen-events",
+    title: "Explore McAllen: Events",
+    url: "https://www.exploremcallen.com/events/",
+    description: "Local events calendar for McAllen and surrounding RGV communities.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["in_person"],
+    region: ["hidalgo", "rgv"],
+  },
+  {
+    id: "stayinmcallen-utrgv-sports-events",
+    title: "Stay in McAllen: UTRGV Sports Events",
+    url: "https://stayinmcallen.com/utrgv-sports-events/",
+    description: "UTRGV sports schedules and events to attend in the RGV.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["in_person"],
+    region: ["hidalgo", "rgv"],
+  },
+  {
+    id: "bgc-mcallen",
+    title: "Boys & Girls Clubs of McAllen",
+    url: "https://www.bgcmcallen.net/s/",
+    description: "After-school programs, mentorship, and youth activities in McAllen.",
+    categories: ["community", "literacy"],
+    audience: ["youth", "family"],
+    format: ["in_person"],
+    region: ["hidalgo", "rgv"],
+  },
+  {
+    id: "visit-btx-happening",
+    title: "Visit Brownsville: Happening in BTX",
+    url: "https://visitbtx.com/happeninginbtx/",
+    description: "Events and activities in Brownsville (BTX) and nearby areas.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["in_person"],
+    region: ["cameron", "rgv"],
+  },
+  {
+    id: "harlingen-field-events",
+    title: "Harlingen Field: Events",
+    url: "https://www.boxofficeticketsales.com/venues/harlingen-field",
+    description: "Tickets and event listings for Harlingen Field.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["in_person"],
+    region: ["cameron", "rgv"],
+  },
+  {
+    id: "visit-harlingen-events",
+    title: "Visit Harlingen: Events",
+    url: "https://visitharlingentexas.com/events/",
+    description: "Local events calendar for Harlingen and the mid-Valley area.",
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["in_person"],
+    region: ["cameron", "rgv"],
+  },
 ];
