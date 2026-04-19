@@ -136,11 +136,11 @@ export const RESOURCES: Resource[] = [
     region: ["rgv"],
   },
   {
-    id: "health-literacy-cdc",
-    title: "CDC: Health Literacy",
-    url: "https://www.cdc.gov/healthliteracy/index.html",
+      id: "health-literacy",
+    title: "Bridging the Gap of Healthcare Inequities in the Rio Grande Valley",
+    url: "https://www.cms.gov/files/document/bridging-gap-healthcare-inequities-rio-grande-valley-healthcare-systems-integrated-health-equity.pdf",
     description:
-      "Plain-language health info and tools for improving health literacy.",
+      "Bringing awareness to healthcare inequities and detailing DHR's plan to increase healthcare equity in the RGV.",
     categories: ["health", "literacy"],
     audience: ["adult", "educator", "family"],
     format: ["online"],
