@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #eaf7ff;
+  --foreground: #0b2230;
+
+  --aero-sky-1: #dff4ff;
+  --aero-sky-2: #bfe7ff;
+  --aero-sky-3: #a9dfff;
+  --aero-water-1: #39d2ff;
+  --aero-water-2: #2aa0ff;
+  --aero-highlight: rgba(255, 255, 255, 0.72);
+  --aero-panel: rgba(255, 255, 255, 0.62);
+  --aero-panel-strong: rgba(255, 255, 255, 0.78);
+  --aero-border: rgba(17, 70, 98, 0.16);
+  --aero-shadow: 0 18px 45px rgba(2, 32, 52, 0.18);
+  --aero-shadow-soft: 0 12px 28px rgba(2, 32, 52, 0.12);
 }
 
 @theme inline {
@@ -14,13 +26,118 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020a12;
+    --foreground: #e7f7ff;
+
+    --aero-sky-1: #061826;
+    --aero-sky-2: #082135;
+    --aero-sky-3: #0a2b46;
+    --aero-water-1: #1ea6d6;
+    --aero-water-2: #2a7fe6;
+    --aero-highlight: rgba(255, 255, 255, 0.12);
+    --aero-panel: rgba(6, 20, 30, 0.62);
+    --aero-panel-strong: rgba(10, 26, 40, 0.78);
+    --aero-border: rgba(255, 255, 255, 0.12);
+    --aero-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+    --aero-shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.4);
   }
 }
 
 body {
-  background: var(--background);
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 18% 12%, var(--aero-highlight), transparent 60%),
+    radial-gradient(900px 550px at 72% 18%, rgba(255, 255, 255, 0.4), transparent 62%),
+    radial-gradient(900px 700px at 50% 95%, rgba(57, 210, 255, 0.32), transparent 60%),
+    linear-gradient(180deg, var(--aero-sky-1) 0%, var(--aero-sky-2) 40%, var(--aero-sky-3) 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .aero-bar {
+    @apply border-b;
+    border-color: var(--aero-border);
+    background: linear-gradient(
+      180deg,
+      var(--aero-panel-strong) 0%,
+      var(--aero-panel) 55%,
+      rgba(255, 255, 255, 0.22) 100%
+    );
+    box-shadow: 0 10px 30px rgba(2, 32, 52, 0.12);
+    backdrop-filter: blur(14px);
+  }
+
+  .aero-panel {
+    @apply rounded-3xl border;
+    border-color: var(--aero-border);
+    background: linear-gradient(
+      180deg,
+      var(--aero-panel-strong) 0%,
+      var(--aero-panel) 55%,
+      rgba(255, 255, 255, 0.26) 100%
+    );
+    box-shadow: var(--aero-shadow);
+    backdrop-filter: blur(18px);
+  }
+
+  .aero-panel-soft {
+    @apply rounded-3xl border;
+    border-color: var(--aero-border);
+    background: var(--aero-panel);
+    box-shadow: var(--aero-shadow-soft);
+    backdrop-filter: blur(14px);
+  }
+
+  .aero-input {
+    @apply rounded-2xl border px-3 py-2;
+    border-color: color-mix(in oklab, var(--aero-border) 70%, black 0%);
+    background: color-mix(in oklab, var(--aero-panel-strong) 80%, white 20%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .aero-input:focus {
+    outline: 2px solid color-mix(in oklab, var(--aero-water-2) 55%, white 45%);
+    outline-offset: 2px;
+  }
+
+  .aero-btn-primary {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition;
+    background: linear-gradient(180deg, var(--aero-water-1) 0%, var(--aero-water-2) 100%);
+    box-shadow: 0 10px 20px rgba(0, 120, 180, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.38);
+  }
+
+  .aero-btn-primary:hover {
+    filter: brightness(1.05);
+  }
+
+  .aero-btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition;
+    border-color: var(--aero-border);
+    background: color-mix(in oklab, var(--aero-panel-strong) 75%, white 25%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .aero-btn-secondary:hover {
+    filter: brightness(1.02);
+  }
+
+  .aero-chip {
+    @apply rounded-full px-3 py-1 text-xs;
+    border: 1px solid var(--aero-border);
+    background: color-mix(in oklab, var(--aero-panel-strong) 70%, white 30%);
+  }
+
+  .aero-link-card {
+    @apply block rounded-3xl border p-5 transition;
+    border-color: var(--aero-border);
+    background: color-mix(in oklab, var(--aero-panel-strong) 55%, white 45%);
+    box-shadow: var(--aero-shadow-soft);
+  }
+
+  .aero-link-card:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+  }
 }
