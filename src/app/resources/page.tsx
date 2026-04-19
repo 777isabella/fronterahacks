@@ -30,13 +30,13 @@ export default function ResourcesPage() {
 
   return (
     <div className="mx-auto w-full max-w-5xl px-6 py-12">
-      <div className="rounded-2xl border border-zinc-200/70 bg-white p-10 shadow-sm dark:border-white/10 dark:bg-zinc-950">
+      <div className="aero-panel p-10">
         <h1 className="text-3xl font-semibold tracking-tight">Resources</h1>
-        <p className="mt-3 max-w-3xl text-base leading-7 text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 max-w-3xl text-base leading-7 opacity-80">
           A curated starting point for literacy support, education pathways, and
           community spaces across the Rio Grande Valley.
         </p>
-        <p className="mt-3 max-w-3xl text-base leading-7 text-zinc-700 dark:text-zinc-300" style={{ fontSize: "12px" }}>
+        <p className="mt-3 max-w-3xl text-base leading-7 opacity-80 style={{ fontSize: "12px" }}>
           Disclaimer: Some sources may be outdated or invalid.
         </p>
       </div>
@@ -59,10 +59,10 @@ export default function ResourcesPage() {
                     className="rounded-2xl border border-zinc-200/70 bg-white p-6 hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-950 dark:hover:bg-white/5"
                   >
                     <div className="text-sm font-semibold">{resource.title}</div>
-                    <div className="mt-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                    <div className="mt-2 text-sm leading-6 opacityy-80">
                       {resource.description}
                     </div>
-                    <div className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+                    <div className="mt-3 text-xs opacity-70">
                       {resource.url}
                     </div>
                   </a>
