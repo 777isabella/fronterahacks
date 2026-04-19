@@ -77,7 +77,7 @@ export default function FindForm() {
     <div className="grid gap-6 md:grid-cols-2">
       <form
         onSubmit={onSubmit}
-        className="rounded-2xl border border-zinc-200/70 bg-white p-8 dark:border-white/10 dark:bg-zinc-950"
+        className="aero-panel-soft p-8"
       >
         <fieldset className="space-y-3">
           <legend className="text-sm font-semibold">What are you looking for?</legend>
@@ -95,7 +95,7 @@ export default function FindForm() {
                         return prev.filter((c) => c !== opt.value);
                       });
                     }}
-                    className="h-4 w-4"
+                    className="h-4 w-4 accent-[color:var(--aero-water-2)]"
                   />
                   {opt.label}
                 </label>
@@ -110,7 +110,7 @@ export default function FindForm() {
             <select
               value={audience}
               onChange={(e) => setAudience(e.target.value as typeof audience)}
-              className="rounded-xl border border-zinc-300 bg-white px-3 py-2 dark:border-white/20 dark:bg-zinc-900"
+              className="aero-input"
             >
               <option value="adult">Adult</option>
               <option value="youth">Youth</option>
@@ -124,7 +124,7 @@ export default function FindForm() {
             <select
               value={format}
               onChange={(e) => setFormat(e.target.value as typeof format)}
-              className="rounded-xl border border-zinc-300 bg-white px-3 py-2 dark:border-white/20 dark:bg-zinc-900"
+              className="aero-input"
             >
               <option value="both">In-person or online</option>
               <option value="in_person">In-person</option>
@@ -137,7 +137,7 @@ export default function FindForm() {
             <select
               value={county}
               onChange={(e) => setCounty(e.target.value as typeof county)}
-              className="rounded-xl border border-zinc-300 bg-white px-3 py-2 dark:border-white/20 dark:bg-zinc-900"
+              className="aero-input"
             >
               <option value="rgv">RGV (any)</option>
               <option value="cameron">Cameron</option>
@@ -152,7 +152,7 @@ export default function FindForm() {
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value as typeof language)}
-              className="rounded-xl border border-zinc-300 bg-white px-3 py-2 dark:border-white/20 dark:bg-zinc-900"
+              className="aero-input"
             >
               <option value="bilingual">Bilingual</option>
               <option value="english">English</option>
@@ -167,7 +167,7 @@ export default function FindForm() {
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             rows={4}
-            className="resize-none rounded-xl border border-zinc-300 bg-white px-3 py-2 dark:border-white/20 dark:bg-zinc-900"
+            className="aero-input resize-none"
             placeholder="Example: I work nights, need weekend classes, starting from scratch…"
           />
         </label>
@@ -175,7 +175,7 @@ export default function FindForm() {
         <button
           type="submit"
           disabled={!canSubmit}
-          className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white hover:bg-zinc-700 disabled:opacity-50 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+          className="aero-btn-primary mt-6 w-full disabled:opacity-50"
         >
           {loading ? "Thinking…" : "Recommend resources"}
         </button>
@@ -187,10 +187,10 @@ export default function FindForm() {
         ) : null}
       </form>
 
-      <div className="rounded-2xl border border-zinc-200/70 bg-white p-8 dark:border-white/10 dark:bg-zinc-950">
+      <div className="aero-panel-soft p-8">
         <h2 className="text-sm font-semibold">Recommendations</h2>
         {!data ? (
-          <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+          <p className="mt-3 text-sm leading-6 opacity-80">
             Submit the form to see suggested links.
           </p>
         ) : (
@@ -201,18 +201,18 @@ export default function FindForm() {
                 href={r.url}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-2xl border border-zinc-200/70 p-5 hover:bg-zinc-50 dark:border-white/10 dark:hover:bg-white/5"
+                className="aero-link-card"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold">{r.title}</div>
-                  <div className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700 dark:bg-white/10 dark:text-zinc-200">
+                  <div className="aero-chip">
                     {r.confidence}
                   </div>
                 </div>
-                <div className="mt-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                <div className="mt-2 text-sm leading-6 opacity-80">
                   {r.reason}
                 </div>
-                <div className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+                <div className="mt-3 text-xs opacity-70">
                   {r.url}
                 </div>
               </a>
