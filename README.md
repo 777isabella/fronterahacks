@@ -10,4 +10,37 @@ Instructions to use code:
 4. Then, use npm install, you must have Node.js installed.
 5. Then, use npm run dev.
 6. It should provide a local host link, copy and paste that into your browser.
+7. One can browse thriugh the website looking at the home page, the 'Mission' page, 'Resources' page, and the 'Find for me' page.
+8. The 'Find for me' page provides a form.
+9. After filling out the form, reccommendtions are generated.
+
+## Tech stack
+
+- Next.js App Router (`next@16`) + React (`react@19`)
+- Tailwind CSS v4 (via `src/app/global.css`)
+- OpenAI SDK (`openai`)
+
+## Project structure
+
+- Pages live in `src/app/`
+  - `/` home: `src/app/page.tsx`
+  - `/mission`: `src/app/mission/page.tsx`
+  - `/resources`: `src/app/resources/page.tsx`
+  - `/find`: `src/app/find/page.tsx`
+- Shared layout (nav/footer): `src/app/layout.tsx`
+- Global styling + Frutiger-Aero theme utilities: `src/app/global.css`
+- Curated resource catalog: `src/lib/resources.ts`
+
+## How recommendations work
+
+- The form on `/find` (`src/app/find/ui/FindForm.tsx`) sends the user’s preferences (categories, audience, format, county, language, notes) to `POST /api/recommend`.
+- The API route (`src/app/api/recommend/route.ts`) sends the user profile plus our curated catalog (`RESOURCES`) to an LLM and requests a JSON response.
+- Only catalog items with a valid `resourceId` (matching a real `RESOURCES[].id`) are accepted.
+- If the model returns invalid IDs or too few matches, the API fills from the curated catalog using a simple scoring heuristic.
+- If the request still doesn’t match well (invalid IDs or no results), the API also adds 5 extra “web” links generated via a second LLM call.
+
+## Resources page
+
+- `/resources` shows the curated catalog grouped by category.
+- It also includes a Google Maps embed at the top to help users find public libraries in the Rio Grande Valley
    
