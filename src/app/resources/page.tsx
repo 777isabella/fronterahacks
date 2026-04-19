@@ -36,7 +36,7 @@ export default function ResourcesPage() {
           A curated starting point for literacy support, education pathways, and
           community spaces across the Rio Grande Valley.
         </p>
-        <p className="mt-3 max-w-3xl text-base leading-7 opacity-80 style={{ fontSize: "12px" }}>
+        <p className="mt-3 max-w-3xl text-base leading-7 opacity-80" style={{ fontSize: "12px" }}>
           Disclaimer: Some sources may be outdated or invalid.
         </p>
       </div>
