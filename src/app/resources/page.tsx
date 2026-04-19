@@ -36,10 +36,34 @@ export default function ResourcesPage() {
           A curated starting point for literacy support, education pathways, and
           community spaces across the Rio Grande Valley.
         </p>
-        <p className="mt-3 max-w-3xl text-base leading-7 opacity-80" style={{ fontSize: "12px" }}>
+        <p
+          className="mt-3 max-w-3xl text-base leading-7 opacity-80"
+          style={{ fontSize: "12px" }}
+        >
           Disclaimer: Some sources may be outdated or invalid.
         </p>
       </div>
+
+      <section className="mt-8">
+        <div className="aero-panel-soft overflow-hidden">
+          <div className="px-8 pt-8">
+            <h2 className="text-lg font-semibold">Public libraries in the RGV</h2>
+            <p className="mt-2 text-sm leading-6 opacity-80">
+              Explore nearby public libraries across the Rio Grande Valley.
+            </p>
+          </div>
+          <div className="mt-6 aspect-video w-full">
+            <iframe
+              className="h-full w-full"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=public%20libraries%20Rio%20Grande%20Valley%20TX&output=embed"
+              title="Google Maps showing public libraries in the Rio Grande Valley"
+            />
+          </div>
+        </div>
+      </section>
 
       <div className="mt-10 space-y-10">
         {(Object.keys(CATEGORY_LABELS) as ResourceCategory[]).map((category) => {
@@ -56,10 +80,10 @@ export default function ResourcesPage() {
                     href={resource.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-2xl border border-zinc-200/70 bg-white p-6 hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-950 dark:hover:bg-white/5"
+                    className="aero-link-card p-6"
                   >
                     <div className="text-sm font-semibold">{resource.title}</div>
-                    <div className="mt-2 text-sm leading-6 opacityy-80">
+                    <div className="mt-2 text-sm leading-6 opacity-80">
                       {resource.description}
                     </div>
                     <div className="mt-3 text-xs opacity-70">
