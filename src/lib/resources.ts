@@ -31,6 +31,28 @@ export const RESOURCES: Resource[] = [
   //   format: ["in_person", "online"],
   //   region: ["rgv"],
   // },
+   {
+    id: "events-calendar",
+    title: "RGV Calendar of Events",
+    url: "https://myrgv.com/calendar-of-events/?utm_source=copilot.com",
+    description:
+      "Events here in the RGV can be seen on this calendar."
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["both"],
+    region: ["rgv"]
+  },
+ {
+    id: "events-stx",
+    title: "South Texas Calendar of Events",
+    url: "https://www.steprgv.org/events?utm_source=copilot.com",
+    description:
+      "A calendar of events in South Texas provided by the South Texas Equality Project."
+    categories: ["community"],
+    audience: ["adult", "youth", "family"],
+    format: ["both"],
+    region: ["rgv"]
+  },
   {
     id: "rgv-vision-literacy-center-article",
     title: "RGV Vision Magazine: The RGV Literacy Center",
@@ -116,11 +138,11 @@ export const RESOURCES: Resource[] = [
     region: ["rgv"],
   },
   {
-    id: "health-literacy-cdc",
-    title: "CDC: Health Literacy",
-    url: "https://www.cdc.gov/healthliteracy/index.html",
+    id: "health-literacy",
+    title: "Bridging the Gap of Healthcare Inequities in the Rio Grande Valley",
+    url: "https://www.cms.gov/files/document/bridging-gap-healthcare-inequities-rio-grande-valley-healthcare-systems-integrated-health-equity.pdf",
     description:
-      "Plain-language health info and tools for improving health literacy.",
+      "Bringing awareness to healthcare inequities and detailing DHR's plan to increase healthcare equity in the RGV.",
     categories: ["health", "literacy"],
     audience: ["adult", "educator", "family"],
     format: ["online"],
@@ -147,5 +169,5 @@ export const RESOURCES: Resource[] = [
     audience: ["adult", "youth", "family"],
     format: ["both"],
     region: ["cameron", "rgv"],
-  },
+  }
 ];
